@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer components {
+  /* Design tokens */
+  .text-primary {
+    color: #245b49;
+  }
+  .text-accent {
+    color: #d9a87b;
+  }
+  .bg-primary {
+    background-color: #245b49;
+  }
+  .bg-cream {
+    background-color: #f7f5ef;
+  }
+  .bg-sage {
+    background-color: #e5ede5;
+  }
+  .border-primary {
+    border-color: #245b49;
+  }
+  .hover\:text-primary:hover {
+    color: #245b49;
+  }
+  .hover\:text-accent:hover {
+    color: #d9a87b;
+  }
+  .hover\:bg-primary:hover {
+    background-color: #245b49;
+  }
+
+  /* Shared layout */
+  .site-container {
+    @apply mx-auto max-w-7xl px-6 lg:px-12;
+  }
+  .section-spacing {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  .section-heading {
+    @apply mb-12 text-center;
+  }
+  .section-eyebrow {
+    @apply mb-3 text-sm font-semibold tracking-[0.2em] uppercase;
+    color: #d9a87b;
+  }
+  .section-title {
+    @apply mb-4 text-3xl font-bold tracking-tight md:text-4xl;
+    color: #245b49;
+  }
+  .section-description {
+    @apply mx-auto max-w-xl text-gray-600;
+  }
+  .body-copy {
+    @apply leading-relaxed text-gray-600;
+  }
+
+  /* Feature cards */
+  .feature-card {
+    @apply rounded-3xl p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg lg:p-6;
+    background: #f7f5ef;
+  }
+  .feature-icon {
+    @apply mb-6 flex h-14 w-14 items-center justify-center rounded-2xl;
+    background: #e5ede5;
+  }
+  .feature-title {
+    @apply mb-3 text-xl font-semibold;
+    color: #245b49;
+  }
+
+  /* Product cards */
+  .product-card {
+    @apply overflow-hidden rounded-3xl bg-white transition-shadow duration-200 hover:shadow-lg;
+  }
+  .product-image-wrap {
+    @apply aspect-square overflow-hidden;
+    background: #e5ede5;
+  }
+  .product-image {
+    @apply h-full w-full object-cover transition-transform duration-500;
+  }
+  .group:hover .product-image {
+    transform: scale(1.05);
+  }
+  .product-title {
+    @apply mb-1 text-lg font-semibold;
+    color: #245b49;
+  }
+  .product-price {
+    @apply font-bold;
+    color: #245b49;
+  }
+  .product-detail {
+    @apply text-sm font-semibold;
+    color: #245b49;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    @apply flex flex-col rounded-3xl bg-white p-8 lg:p-6;
+  }
+  .testimonial-stars {
+    @apply mb-5 text-xl tracking-widest;
+    color: #d9a87b;
+  }
+  .testimonial-quote {
+    @apply mb-8 flex-1;
+  }
+  .testimonial-avatar {
+    @apply flex h-11 w-11 items-center justify-center rounded-full font-semibold;
+    background: #e5ede5;
+    color: #245b49;
+  }
+  .customer-name {
+    @apply font-semibold;
+    color: #245b49;
+  }
+
+  /* Footer */
+  .social-link {
+    @apply flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20;
+  }
+  .footer-heading {
+    @apply mb-5 text-lg font-semibold;
+  }
+  .footer-links {
+    @apply space-y-3 text-sm;
+    color: #d8e5dd;
+  }
+  .footer-link:hover {
+    color: #fff;
+  }
+}
