@@ -74,6 +74,7 @@ npm run preview
 ```text
 hydra-landing-page/
 ├── public/
+│   ├── images/
 │   └── favicon.svg
 ├── src/
 │   ├── features/
