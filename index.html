@@ -11,14 +11,13 @@
 <body>
   <div class="min-h-screen bg-white text-gray-900">
     <!-- HEADER -->
-    <header>
+    <header class="relative">
       <nav aria-label="Main navigation" class="site-container flex items-center justify-between py-6">
         <!-- Logo -->
         <a class="text-primary text-2xl font-extrabold tracking-tight" href="#"> HYDRA<span
             class="text-[#D9A87B]">.</span> </a>
         <!-- Desktop Navigation -->
-        <ul class="hidden items-center gap-6 md:flex lg:gap-8">
-          <!-- Mobile hidden, tablet & desktop visible -->
+        <ul class="hidden items-center gap-6 lg:flex lg:gap-8">
           <li>
             <a class="text-primary font-medium" href="#home"> Home </a>
           </li>
@@ -28,21 +27,43 @@
           <li>
             <a class="hover:text-primary text-gray-600" href="#products"> Products </a>
           </li>
-          <!-- Desktop only -->
-          <li class="hidden lg:block">
+          <li>
+            <a class="hover:text-primary text-gray-600" href="#testimonials"> Testimonials </a>
+          </li>
+          <li>
             <a class="hover:text-primary text-gray-600" href="#about"> About Us </a>
           </li>
-          <li class="hidden lg:block">
+          <li>
             <a class="hover:text-primary text-gray-600" href="#contact"> Contact </a>
           </li>
         </ul>
         <!-- Mobile Menu (visual only) -->
-        <button aria-label="Open menu" class="text-primary flex items-center md:hidden" type="button">
-          <svg aria-hidden="true" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+        <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu"
+          class="text-primary flex items-center lg:hidden" type="button">
+          <!-- Hamburger -->
+          <svg id="menu-icon" aria-hidden="true" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
             stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
+          <!-- Close -->
+          <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
         </button>
+      </nav>
+      <nav id="mobile-menu"
+        class="invisible absolute top-full right-0 left-0 z-50 border-t border-gray-200 bg-white px-6 py-4 opacity-0 transition-[opacity,transform,visibility] duration-200 ease-out lg:hidden motion-reduce:transition-none"
+        aria-label="Mobile navigation">
+        <div class="flex flex-col gap-4">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#products">Products</a>
+          <a href="#about">About Us</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </header>
     <!-- MAIN CONTENT -->

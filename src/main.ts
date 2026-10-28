@@ -1,3 +1,5 @@
 import './style.css';
 
-console.log('Hydra Landing Page initialized');
+import { initMobileMenu } from './features/mobile-menu';
+
+initMobileMenu();
